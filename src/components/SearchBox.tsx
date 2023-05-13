@@ -1,7 +1,12 @@
-import React from 'react';
+import { ChangeEventHandler } from 'react';
 import './SearchBox.css';
 
-function SearchBox({ searchChange, placeHolder }) {
+type SearchBoxProps = {
+  searchChange: ChangeEventHandler<HTMLInputElement>;
+  placeHolder?: string;
+};
+
+function SearchBox({ searchChange, placeHolder }: SearchBoxProps) {
   return (
     <div className="pa2">
       <input
